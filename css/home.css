@@ -151,6 +151,7 @@
   left: 0;
 }
 .c-main-item__image {
+  object-fit: cover;
   border-radius: 5px;
   width: 100%;
   height: 100%;

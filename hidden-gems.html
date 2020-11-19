@@ -41,6 +41,13 @@
 <img class="c-gallery__sub-image c-gallery__sub-image--small c-gallery__sub-image--with-margin" src="./images/hidden-gems-4.jpg">
 </div>
 </div>
+<div class="c-gallery__responsive">
+<img class="c-gallery__responsive-item" src="./images/hidden-gems.jpg">
+<img class="c-gallery__responsive-item" src="./images/hidden-gems-1.jpg">
+<img class="c-gallery__responsive-item" src="./images/hidden-gems-2.jpg">
+<img class="c-gallery__responsive-item" src="./images/hidden-gems-3.jpg">
+<img class="c-gallery__responsive-item" src="./images/hidden-gems-4.jpg">
+</div>
 </div>
 </div>
 <div class="c-content">
@@ -111,6 +118,16 @@ Here at Pelago, we bring you a series of amazing hidden gems, giving you the opp
 </html>
 <script>
   $(document).ready(function(){
+    var slickItem = $('.c-gallery__responsive');
   
+    var setting =  {
+      dots: true,
+      arrows: false,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    }
+  
+    slickItem.slick(setting);
   });
 </script>
