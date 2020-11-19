@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10 Best Things To Do In Singapore 2020 - 2021 | Pelago</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/slick.min.js"></script>
+</head>
+<body>
+<header>
+<div class="c-header">
+<div class="c-container c-header__container">
+<img class="c-header__logo" src="./images/logo.svg">
+<div class="c-header__text">A Singapore Airlines Venture</div>
+</div>
+</div>
+</header>
+<div class="c-body">
+<div class="c-breadcrumb">
+<div class="c-container c-breadcrumb__container">
+<div class="c-breadcrumb__link">Singapore</div>
+<div class="c-breadcrumb__arrow">></div>
+<div class="c-breadcrumb__link c-breadcrumb__link--active">Singapore Highlights</div>
+</div>
+</div>
+<div class="c-banner">
+<div class="c-container c-banner__container">
+<img class="c-banner__image" src="./images/banner.png">
+<h1 class="c-banner__title">Explore the best of Singapore</h1>
+<div class="c-banner__text">A bustling city-state in the heart of Southeast Asia, Singapore is known for being a melting pot of cultures, as well as its pervasive greenary amidst urban landscape.</div>
+</div>
+</div>
+<div class="c-main">
+<div class="c-container c-main__container">
+<h1 class="c-main__title">Singapore Highlights</h1>
+<div class="c-main__items">
+<a class="c-main-item" href="hidden-gems.html">
+<div class="c-main-item__label c-main-item__label--blue">
+<span>Do</span>
+</div>
+<div class="c-main-item__card">
+<img class="c-main-item__image" src="./images/hidden-gems.jpg">
+</div>
+<div class="c-main-item__info-wrapper">
+<div class="c-main-item__info-title">Hidden Gems</div>
+<div class="c-main-item__info-description">See a different side of Singapore and discover all sorts of unique hidden gems</div>
+<div class="c-main-item__tags">
+<div class="c-main-item__tag-item">Hidden Gem</div>
+</div>
+</div>
+</a>
+<a class="c-main-item" href="rooftop-bar.html">
+<div class="c-main-item__label c-main-item__label--purple">
+<span>Drink</span>
+</div>
+<div class="c-main-item__card">
+<img class="c-main-item__image" src="./images/rooftop-bar.jpg">
+</div>
+<div class="c-main-item__info-wrapper">
+<div class="c-main-item__info-title">Rooftop Bars</div>
+<div class="c-main-item__info-description">Sip on amazing drinks and soak up epic views</div>
+<div class="c-main-item__tags">
+<div class="c-main-item__tag-item">Local Favourite</div>
+<div class="c-main-item__tag-item">Couples</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="c-footer">
+<div class="c-container c-footer__container">
+<img class="c-footer__logo" src="./images/logo.svg">
+</div>
+</div>
+</footer>
+</body>
+</html>
+<script>
+  $(document).ready(function(){
+   var stickFooter = function () {
+      if ($(window).height() > $('body').innerHeight()) {
+        $('body').css('height', $(window).height());
+        $('body').css('overflow', 'hidden');
+      } else {
+        $('body').removeAttr('style');
+      }
+   }
+  
+    var slickItem = $('.c-main__items');
+    slickItem.on('init', function(event, slick){
+      $('.c-main-item__image').addClass('c-main-item__after-render-image');
+      $('.c-main-item__card').addClass('c-main-item__after-render-card');
+    });
+  
+    var setting = {
+      arrows: false,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      autoplay: false,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 560,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+          }
+        }
+      ]
+    }
+  
+    var settingMobile =  {
+      dots: true,
+      arrows: false,
+      infinite: false,
+    }
+  
+    slickItem.slick(setting);
+  
+    stickFooter();
+    $(window).on('resize orientationchange', function() {
+      slickItem.slick('refresh');
+      console.log(12313123);
+      stickFooter();
+    });
+  });
+</script>
