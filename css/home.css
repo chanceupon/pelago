@@ -67,16 +67,6 @@
 .c-main__items .slick-track {
   display: flex;
 }
-@media (min-width: 1025px) {
-  .c-main__items .slick-track {
-    width: 66.666% !important;
-  }
-}
-@media (min-width: 561px) and (max-width: 1024px) {
-  .c-main__items .slick-track {
-    width: 100% !important;
-  }
-}
 .c-main__items .slick-dots {
   margin-top: 0;
   display: flex !important;
@@ -129,7 +119,7 @@
 .c-main-item__card {
   width: 100%;
   position: relative;
-  padding-top: 80%;
+  padding-top: 140%;
   border-radius: 5px;
 }
 .c-main-item__card:after {
@@ -179,6 +169,9 @@
 }
 .c-main-item__label--purple {
   background: #7b1c6a;
+}
+.c-main-item__label--orange {
+  background: #ee766d;
 }
 .c-main-item__label span {
   transform: skewX(15deg) !important;
